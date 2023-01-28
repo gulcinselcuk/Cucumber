@@ -1,54 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="82.564" tests="3" skipped="0" failures="0" errors="0">
-<testcase classname="data_tables" name="TC_Create_And verify the test data creation - test_data - Example #1.1" time="28.648">
+<testsuite name="Cucumber" time="0.278" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="hooks_test" name="TC_01_" time="0.035">
+<failure/>
 <system-out><![CDATA[
-Given user is on the "https://editor.datatables.net/" page..................passed
-And user clicks on the new button...........................................passed
-And user enters the first name "John".......................................passed
-And user enters the last name "Smith".......................................passed
-And user enters the position "tester".......................................passed
-And user enters office "NYC"................................................passed
-And user enters extension "2134"............................................passed
-And user enters start date "2023-01-01".....................................passed
-And user enters the salary "8000"...........................................passed
-And click on create button..................................................passed
-And search for the first name "John"........................................passed
-Then verify the name field contains the first name "John"...................passed
-Then close the application..................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="data_tables" name="TC_Create_And verify the test data creation - test_data - Example #1.2" time="26.49">
-<system-out><![CDATA[
-Given user is on the "https://editor.datatables.net/" page..................passed
-And user clicks on the new button...........................................passed
-And user enters the first name "sam"........................................passed
-And user enters the last name "walter"......................................passed
-And user enters the position "ba"...........................................passed
-And user enters office "LA".................................................passed
-And user enters extension "3540"............................................passed
-And user enters start date "2022-01-01".....................................passed
-And user enters the salary "10000"..........................................passed
-And click on create button..................................................passed
-And search for the first name "sam".........................................passed
-Then verify the name field contains the first name "sam"....................passed
-Then close the application..................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="data_tables" name="TC_Create_And verify the test data creation - test_data - Example #1.3" time="27.232">
-<system-out><![CDATA[
-Given user is on the "https://editor.datatables.net/" page..................passed
-And user clicks on the new button...........................................passed
-And user enters the first name "nancy"......................................passed
-And user enters the last name "brown".......................................passed
-And user enters the position "dev"..........................................passed
-And user enters office "TX".................................................passed
-And user enters extension "8520"............................................passed
-And user enters start date "2021-01-01".....................................passed
-And user enters the salary "12000"..........................................passed
-And click on create button..................................................passed
-And search for the first name "nancy".......................................passed
-Then verify the name field contains the first name "nancy"..................passed
-Then close the application..................................................passed
+Given user is on "https://www.bluerentalcars.com/login" page................undefined
+And user enters customer_email and customer_password........................skipped
+Then verify the next page url contains login keyword........................skipped
 ]]></system-out>
 </testcase>
 </testsuite>
