@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="0.278" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="hooks_test" name="TC_01_" time="0.035">
+<testsuite name="Cucumber" time="4.119" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="hooks_test" name="TC_01_" time="3.946">
 <failure/>
 <system-out><![CDATA[
-Given user is on "https://www.bluerentalcars.com/login" page................undefined
-And user enters customer_email and customer_password........................skipped
-Then verify the next page url contains login keyword........................skipped
+Given user is on "https://www.bluerentalcars.com/login" page................passed
+And user enters customer_email and customer_password........................passed
+Then verify the next page url contains login keyword........................undefined
 ]]></system-out>
 </testcase>
 </testsuite>
