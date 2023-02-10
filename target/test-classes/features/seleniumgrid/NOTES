@@ -1,0 +1,79 @@
+****SELENIUM GRID NOTES****
+LINK:https://www.selenium.dev/documentation/grid/getting_started
+
+
+STEPS:
+1. Create a folder on the Desktop:SeleniumServer
+2. *Download Selenium Server:  https://www.selenium.dev/downloads/
+   *Download Chrome Driver: https://chromedriver.chromium.org/downloads
+   *Download Firefox Driver: https://github.com/mozilla/geckodriver/releases
+
+  NOTE:Make sure the selenium server and drivers are UNZIPPED and in the Selenium Server folder
+3. Open your terminal or cmd and change the directory to Selenium Driver folder
+To switch the directory use: cd "path of file"(ex:/Users/gulcin/Desktop/Selenium\ Server )
+
+4.Run the standalone server
+java -jar selenium-server-<version>.jar standalone
+version:4.8.0
+java -jar selenium-server-4.8.0.jar standalone
+
+
+5.Then you should see this message: Started Selenium Standalone 4.8.0 (revision 267030adea): http://192.168.1.17:4444
+open "http://192.168.1.17:4444" in a browser to see it is ok
+****NOTE:So far we completed set up and run Selenium Grid
+****Now we will create and run the test case on grid
+
+6.We will design our test cases in cucumber
+****Create a feature file:selenium_grid_test_case.feature:
+Feature: grid_feature
+@grid_chrome
+  Scenario: tc01_running_tests_on_Chrome
+    Given user is on the application_url using chrome
+    Then verify the page title contains "Techpro Education"
+
+
+****Runner for selenium grid
+package runners;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        plugin = {
+                "pretty",
+                "html:target/default-cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml",
+                "rerun:target/failedRerun.txt"
+        },
+        monochrome=true,
+        features = "./src/test/resources/features",
+        glue = {"stepdefinitions"},
+        dryRun = false,
+        tags = "@grid_chrome"
+
+)
+
+public class GridRunner {
+}
+
+***Generate step definitions
+@Given("user is on the application_url using chrome")
+public void user_is_on_the_application_url_using_chrome() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("verify the page title contains {string}")
+public void verify_the_page_title_contains(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("close the remote driver")
+public void close_the_remote_driver() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+

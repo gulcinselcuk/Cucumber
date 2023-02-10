@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="4.119" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="hooks_test" name="TC_01_" time="3.946">
-<failure/>
+<testsuite name="Cucumber" time="12.324" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="grid_feature" name="TC01_running_tests_on_Chrome" time="6.72">
 <system-out><![CDATA[
-Given user is on "https://www.bluerentalcars.com/login" page................passed
-And user enters customer_email and customer_password........................passed
-Then verify the next page url contains login keyword........................undefined
+Given user is on the application_url using chrome...........................passed
+Then verify the page title contains "Techpro Education".....................passed
+Then close the remote driver................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="grid_feature" name="TC02_running_tests_on_Firefox" time="5.427">
+<system-out><![CDATA[
+Given user is on the application_url using firefox..........................passed
+Then verify the page title contains "Techpro Education".....................passed
+Then close the remote driver................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
