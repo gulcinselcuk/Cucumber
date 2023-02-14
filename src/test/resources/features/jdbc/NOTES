@@ -1,0 +1,26 @@
+JDBC NOTES
+1. JDBC is an API to work with databases
+   JDBC=Java Database Connectivity
+
+2. Add Database Utilities Class in utilities folder
+
+3. Add driver(dependency) for post gre sql database
+    <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>42.5.0</version>
+            </dependency>
+
+
+4.Create feature file under jdbc folder
+    *jdbc_read_data.feature
+
+5. create runner class for only database
+
+6.Generate the step definitions and write the code
+
+@Given("user connects to the application database")
+public void user_connects_to_the_application_database() {
+}
+

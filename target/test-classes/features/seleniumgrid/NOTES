@@ -75,5 +75,26 @@ public void close_the_remote_driver() {
     throw new io.cucumber.java.PendingException();
 }
 
+******************************************************************
+1. What is Selenium Grid? When do you use?
+***Selenium grid is used to run test cases
+    *on remote web driver
+    *for cross browser testing (chrome, firefox, edge)
+    *for parallel-testing
+    *for running different operating system such as IOS or Windows
+2.How do you run tests on selenium-grid?
+    *We need Selenium Server and drivers(chrome,firefox,edge...)
+    *They should be in the same folders
+    *use Cmd or terminal to run the server : java -jar selenium-server-4.8.0.jar standalone
+*NOTE: with selenium 4, we can run in standalone or distributed mode.We can also run using HUB and NODES
+3.What is HUB?
+    *HUB is virtual server.We can create only one HUB.
+    *java -jar selenium-server-4.8.0.jar hub
+4.What is NODE?
+    *Node is a virtual machine.We can create multiple nodes using the hub
+    *java -jar selenium-server-4.8.0.jar node
+
+    NOTE:Control+c will stop terminal
+
 
 

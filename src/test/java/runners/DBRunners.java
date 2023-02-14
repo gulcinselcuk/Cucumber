@@ -13,12 +13,12 @@ import org.junit.runner.RunWith;
                 "rerun:target/failedRerun.txt"
         },
         monochrome=true,
-        features = "./src/test/resources/features/seleniumgrid",
+        features = "./src/test/resources/features/jdbc",
         glue = {"stepdefinitions"},
         dryRun = false,
-        tags = "@grid_feature"
+        tags = "@db_read"
 
 )
 
-public class GridRunner {
+public class DBRunners {
 }
